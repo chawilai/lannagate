@@ -47,25 +47,23 @@
 <body class="bg-background-light dark:bg-background-dark font-sans text-[#181411] selection:bg-primary/30">
 <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
 <!-- Header Section -->
-<header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-solid border-[#e7e5e4] px-6 lg:px-20 py-3">
-<div class="mx-auto max-w-[1440px] flex items-center justify-between gap-4">
-<div class="flex items-center gap-10">
-                <div class="flex items-center gap-3">
-                    <div class="text-primary text-3xl">
-                        <span class="material-symbols-outlined text-4xl">temple_buddhist</span>
-                    </div>
-                    <a href="index.html">
-                        <h2 class="text-2xl font-bold tracking-tight font-display text-[#181411]">LannaGate</h2>
-                    </a>
-                </div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-[#181411] text-sm font-semibold hover:text-primary transition-colors" href="index.html">Home</a>
-<a class="text-[#181411] text-sm font-semibold hover:text-primary transition-colors border-b-2 border-primary pb-1" href="packages.html">Packages</a>
-<a class="text-[#181411] text-sm font-semibold hover:text-primary transition-colors" href="gallery.html">Gallery</a>
-<a class="text-[#181411] text-sm font-semibold hover:text-primary transition-colors" href="about.html">About</a>
-<a class="text-[#181411] text-sm font-semibold hover:text-primary transition-colors" href="contact.html">Contact</a>
-</nav>
-</div>
+<header class="fixed top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-[#f4f2f0] dark:border-white/10 px-6 lg:px-20 py-4">
+<div class="mx-auto max-w-7xl relative flex items-center justify-between">
+    <div class="flex items-center gap-3">
+        <div class="text-primary text-3xl">
+            <span class="material-symbols-outlined text-4xl">temple_buddhist</span>
+        </div>
+        <a href="index.html">
+            <h2 class="text-2xl font-bold tracking-tight font-display text-[#181411]">LannaGate</h2>
+        </a>
+    </div>
+    <nav class="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-10">
+        <a class="text-[#181411] text-sm font-semibold hover:text-primary transition-colors" href="index.html">Home</a>
+        <a class="text-primary text-sm font-semibold hover:text-primary transition-colors" href="packages.html">Packages</a>
+        <a class="text-[#181411] text-sm font-semibold hover:text-primary transition-colors" href="gallery.html">Gallery</a>
+        <a class="text-[#181411] text-sm font-semibold hover:text-primary transition-colors" href="about.html">About</a>
+        <a class="text-[#181411] text-sm font-semibold hover:text-primary transition-colors" href="contact.html">Contact</a>
+    </nav>
 <div class="flex items-center gap-4">
 <label class="hidden sm:flex relative min-w-40 max-w-64">
 <div class="absolute inset-y-0 left-0 flex items-center pl-3 text-[#897261]">
@@ -74,11 +72,13 @@
 <input class="w-full rounded-xl bg-[#f4f2f0] border-none py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary/20 placeholder:text-[#897261]" placeholder="Search packages..."/>
 </label>
 
-<div class="hidden sm:block size-10 rounded-full bg-center bg-cover border-2 border-white shadow-sm" data-alt="User profile avatar portrait" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDZQw5Tm_Zg7VqVXgm9lnDi38xsOPTwxzduvC_zL4v-bZ06BBhzuurYRwSousg8Qvqu036YFzLkQPooM_8Oc1wNuhHHv1UmkH8s7e00ESzoqpvo2xzj02fdn_b-pbtuUiZ5ojd_aMNFncdklbcvoBT6fKEQ0kjdTnXJOJtsbtjpVLRFGhz0s4sqHiXSVNa4FHb3YtwHx9LfLda9r84CaiL4BDfHxIgDetWdWG3gee786K_YCP2PYQuYdGBUFKiREmZcqvptZBKoKpB5");'></div>
+<div class="size-10 rounded-full border-2 border-primary/20 overflow-hidden">
+                    <img alt="User Profile" class="w-full h-full object-cover" data-alt="Portrait of a smiling traveler" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtB3eX_XQRDU437c1ASn2W_kur3VCcg5nwMDWgdTMc1XfWX0NAiTs2WCCr9ng7FzerxELHg9jpPF5vCSrDlPi7iHu5qAEz8IxmwLUYlLymF_yPHF8b6TSTDTa_LVTUG_VYIDeL-eUIHr-U90OHZF7r72omWv1N4pU2ECmVhG7OqJaCFvNDmJTOEGWa-auXDTAO7a4u4394dxI6tFFcamu8DO4QAV-bUVVB7aX_fJ6wgtLmgrPD7OsW9mwjIlK2o8H5H_ieTI8J_8-z"/>
+                </div>
 </div>
 </div>
 </header>
-<main class="mx-auto w-full max-w-[1440px] px-6 lg:px-20 py-8">
+<main class="mx-auto w-full max-w-[1440px] px-6 lg:px-20 py-8 pt-32">
 <!-- Hero Title Section -->
 <div class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
 <div class="max-w-2xl">
