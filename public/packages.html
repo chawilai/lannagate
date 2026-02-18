@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee7c2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221810",
+                        "lanna-green": "#2d4c3b",
+                        "lanna-gold": "#d4af37",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #d6d3d1;
+            border-radius: 10px;
+        }
+    </style>
+<title>LannaGate | Discover Northern Thailand</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-[#181411] selection:bg-primary/30">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header Section -->
+<header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-solid border-[#e7e5e4] px-6 lg:px-20 py-3">
+<div class="mx-auto max-w-[1440px] flex items-center justify-between gap-4">
+<div class="flex items-center gap-10">
+                <div class="flex items-center gap-3">
+                    <div class="text-primary text-3xl">
+                        <span class="material-symbols-outlined text-4xl">temple_buddhist</span>
+                    </div>
+                    <a href="index.html">
+                        <h2 class="text-2xl font-bold tracking-tight font-display text-[#181411]">LannaGate</h2>
+                    </a>
+                </div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#181411] text-sm font-semibold hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="text-[#181411] text-sm font-semibold hover:text-primary transition-colors border-b-2 border-primary pb-1" href="packages.html">Packages</a>
+<a class="text-[#181411] text-sm font-semibold hover:text-primary transition-colors" href="gallery.html">Gallery</a>
+<a class="text-[#181411] text-sm font-semibold hover:text-primary transition-colors" href="about.html">About</a>
+<a class="text-[#181411] text-sm font-semibold hover:text-primary transition-colors" href="contact.html">Contact</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<label class="hidden sm:flex relative min-w-40 max-w-64">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 text-[#897261]">
+<span class="material-symbols-outlined text-lg">search</span>
+</div>
+<input class="w-full rounded-xl bg-[#f4f2f0] border-none py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary/20 placeholder:text-[#897261]" placeholder="Search packages..."/>
+</label>
+
+<div class="hidden sm:block size-10 rounded-full bg-center bg-cover border-2 border-white shadow-sm" data-alt="User profile avatar portrait" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDZQw5Tm_Zg7VqVXgm9lnDi38xsOPTwxzduvC_zL4v-bZ06BBhzuurYRwSousg8Qvqu036YFzLkQPooM_8Oc1wNuhHHv1UmkH8s7e00ESzoqpvo2xzj02fdn_b-pbtuUiZ5ojd_aMNFncdklbcvoBT6fKEQ0kjdTnXJOJtsbtjpVLRFGhz0s4sqHiXSVNa4FHb3YtwHx9LfLda9r84CaiL4BDfHxIgDetWdWG3gee786K_YCP2PYQuYdGBUFKiREmZcqvptZBKoKpB5");'></div>
+</div>
+</div>
+</header>
+<main class="mx-auto w-full max-w-[1440px] px-6 lg:px-20 py-8">
+<!-- Hero Title Section -->
+<div class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="max-w-2xl">
+<h1 class="text-[#181411] text-4xl font-black leading-tight tracking-tight mb-2">Discover Northern Thailand</h1>
+<p class="text-[#897261] text-lg">Explore curated cultural and nature-focused travel packages across the Lanna heartland.</p>
+</div>
+<div class="bg-white px-4 py-2 rounded-xl border border-[#e7e5e4] shadow-sm inline-flex items-center gap-2">
+<span class="text-sm font-bold text-[#181411]">86</span>
+<span class="text-sm text-[#897261]">Packages Found</span>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row gap-10">
+<!-- Sidebar Filters -->
+<aside class="w-full lg:w-72 flex-shrink-0 space-y-8">
+<div class="bg-white p-6 rounded-xl border border-[#e7e5e4] shadow-sm sticky top-24">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-lg font-bold">Filters</h3>
+<button class="text-xs font-bold text-primary hover:underline">Reset All</button>
+</div>
+<!-- Destinations -->
+<div class="mb-8">
+<div class="flex items-center gap-2 mb-4 text-[#181411]">
+<span class="material-symbols-outlined text-lg">location_on</span>
+<span class="font-bold text-sm">Destinations</span>
+</div>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="rounded border-[#d6d3d1] text-primary focus:ring-primary h-5 w-5" type="checkbox"/>
+<span class="text-sm text-[#181411] group-hover:text-primary transition-colors">Chiang Mai</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-[#d6d3d1] text-primary focus:ring-primary h-5 w-5" type="checkbox"/>
+<span class="text-sm text-[#181411] group-hover:text-primary transition-colors">Chiang Rai</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-[#d6d3d1] text-primary focus:ring-primary h-5 w-5" type="checkbox"/>
+<span class="text-sm text-[#181411] group-hover:text-primary transition-colors">Mae Hong Son</span>
+</label>
+</div>
+</div>
+<!-- Activity Type -->
+<div class="mb-8">
+<div class="flex items-center gap-2 mb-4 text-[#181411]">
+<span class="material-symbols-outlined text-lg">eco</span>
+<span class="font-bold text-sm">Activity Type</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-1.5 rounded-full bg-primary/20 text-[#181411] text-xs font-bold border border-primary/30">Culture</button>
+<button class="px-4 py-1.5 rounded-full bg-[#f4f2f0] text-[#897261] text-xs font-bold hover:bg-primary/10 transition-colors">Nature</button>
+<button class="px-4 py-1.5 rounded-full bg-[#f4f2f0] text-[#897261] text-xs font-bold hover:bg-primary/10 transition-colors">Adventure</button>
+<button class="px-4 py-1.5 rounded-full bg-[#f4f2f0] text-[#897261] text-xs font-bold hover:bg-primary/10 transition-colors">Culinary</button>
+</div>
+</div>
+<!-- Price Range -->
+<div>
+<div class="flex items-center gap-2 mb-4 text-[#181411]">
+<span class="material-symbols-outlined text-lg">sell</span>
+<span class="font-bold text-sm">Price Range</span>
+</div>
+<input class="w-full accent-primary mb-2" max="2000" min="100" type="range" value="800"/>
+<div class="flex justify-between text-xs font-medium text-[#897261]">
+<span>$100</span>
+<span>Up to $800</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Grid Content -->
+<div class="flex-1">
+<!-- Sort Bar -->
+<div class="flex justify-end mb-6">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-[#897261] uppercase tracking-wider">Sort By:</span>
+<select class="bg-transparent border-none text-sm font-bold focus:ring-0 cursor-pointer pr-8">
+<option>Most Popular</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Newest First</option>
+</select>
+</div>
+</div>
+<!-- Package Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group bg-white rounded-xl border border-[#e7e5e4] overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="relative h-56 w-full overflow-hidden">
+<img class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Golden buddhist temple in Chiang Mai Thailand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA19mmM3vNXcx8KUDI-GcNj7Jaclr4__NUc5t35O03tXgpWSPYNMcOXqYQif2_b7luxVLkkip0dDzHKrW6gidwl9frlTqtQ2-sD0C2gkF-rJneZgD7ltFGD0DvKFKzvzVCivzIoxQOxQoJn83rU5bBdluI6KJfZVVvKI2M9V2_rIxOgj1hDrsDnq0wX0V5Ru7fRsNdoqI6dqcUOstJx76V6Uz5_TETDLNSEzjoIT2q_-sKnMQWpCk-JxLlkuz0-CrflSFCa5uSniufT"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-white/90 backdrop-blur px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-widest text-[#181411] shadow-sm">3D/2N</span>
+<span class="bg-primary px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-widest text-[#181411] shadow-sm">Popular</span>
+</div>
+<button class="absolute top-4 right-4 bg-white/50 hover:bg-white text-white hover:text-red-500 size-8 rounded-full flex items-center justify-center backdrop-blur transition-all">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-1 text-primary mb-2">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm text-gray-300">star</span>
+<span class="text-xs font-bold text-[#897261] ml-1">(4.8)</span>
+</div>
+<h3 class="text-[#181411] font-bold text-lg mb-2 leading-tight">Chiang Mai Temple &amp; Food Trail</h3>
+<p class="text-[#897261] text-sm line-clamp-2 mb-4">Discover the ancient secrets of Wat Phra Singh and indulge in a sunset food tour through bustling night markets.</p>
+<div class="flex items-center justify-between border-t border-[#f4f2f0] pt-4 mt-2">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-[#897261]">Starting from</span>
+<span class="text-lg font-black text-primary">$299</span>
+</div>
+<a href="package-detail.html" class="bg-[#f4f2f0] hover:bg-primary/20 text-[#181411] font-bold text-xs px-4 py-2 rounded-lg transition-colors">
+                                        View Details
+                                    </a>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-white rounded-xl border border-[#e7e5e4] overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="relative h-56 w-full overflow-hidden">
+<img class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="The famous White Temple Wat Rong Khun in Chiang Rai" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCoK0Z9XYVR5m4krVGgiQnMuCh7bHAvhCtQyqzYPRj4AN2EQgKImCqbO3lq_ih3feSZNN1hxW5mc3lV5H0VSNTsLGCpxDYMSxXWwqo9xbFfeG2ZMlhamUb_C7QniTsxbelvetkC42TZuzlFUVNNuzCycYjStNP-50tugJ61iu5_9viHkleoAD6q-dyGxC7S3BfitunUtlNBhV2x6CyT9DUCaOMcI6NQC9hSVawE32H0yydUsgX0VOnoz8d-xaEw1bsJSAo6OzTksgA"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-white/90 backdrop-blur px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-widest text-[#181411] shadow-sm">2D/1N</span>
+</div>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-1 text-primary mb-2">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="text-xs font-bold text-[#897261] ml-1">(5.0)</span>
+</div>
+<h3 class="text-[#181411] font-bold text-lg mb-2 leading-tight">Chiang Rai Arts &amp; White Temple</h3>
+<p class="text-[#897261] text-sm line-clamp-2 mb-4">A journey through modern Lanna artistic expressions, featuring the surreal White Temple and Black House.</p>
+<div class="flex items-center justify-between border-t border-[#f4f2f0] pt-4 mt-2">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-[#897261]">Starting from</span>
+<span class="text-lg font-black text-primary">$185</span>
+</div>
+<button class="bg-[#f4f2f0] hover:bg-primary/20 text-[#181411] font-bold text-xs px-4 py-2 rounded-lg transition-colors">
+                                        View Details
+                                    </button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-white rounded-xl border border-[#e7e5e4] overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="relative h-56 w-full overflow-hidden">
+<img class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Misty mountain landscape in Mae Hong Son Thailand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS4Z770wyiwPIDI7zfA5x7MjcPFBqjKyE3u2Ta9awkY4S6d_uOywZr5TSKgwGwKgdqerESzK8ll2Pk3wv3IUQ5sjOKUOeA6yrReAR3FtJ-lvg03LfDDbWZDQ-dztagI47xLXmrRIv3BPexmLvJke_YoOo8mW7cFB_asv-VUq_KHS4oFwsSFm_b_lJKsSfF1ZPHBS_x_rT5_Xgjg97daqQSD8LS5grfwH1PT2OVb6xVqM8lcxhOtArWHOArf8yNlGWynjKz_f9splz-"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-white/90 backdrop-blur px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-widest text-[#181411] shadow-sm">5D/4N</span>
+<span class="bg-orange-500 px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-widest text-white shadow-sm">Eco-Tour</span>
+</div>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-1 text-primary mb-2">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm text-gray-300">star</span>
+<span class="text-xs font-bold text-[#897261] ml-1">(4.6)</span>
+</div>
+<h3 class="text-[#181411] font-bold text-lg mb-2 leading-tight">Mae Hong Son Misty Peaks Trek</h3>
+<p class="text-[#897261] text-sm line-clamp-2 mb-4">Embark on a rugged adventure through remote hill tribe villages and lush tropical pine forests.</p>
+<div class="flex items-center justify-between border-t border-[#f4f2f0] pt-4 mt-2">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-[#897261]">Starting from</span>
+<span class="text-lg font-black text-primary">$540</span>
+</div>
+<button class="bg-[#f4f2f0] hover:bg-primary/20 text-[#181411] font-bold text-xs px-4 py-2 rounded-lg transition-colors">
+                                        View Details
+                                    </button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group bg-white rounded-xl border border-[#e7e5e4] overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="relative h-56 w-full overflow-hidden">
+<img class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Traditional Lanna elephant sanctuary nature experience" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmeUxb5pPUvdiMf1fISYw6TJdlDshscToWq_BhcYvb-YvDB8imwqnSIMcT04_pTj0ByGzNvN5rsdV5mfDs7On3zztbdWSV0-0c9pkTU6hBJQQG3hcQMguh9_bSqy2czZac3Bm0DRyqovcK-NR06ghndpzeLCTvPpdQn-9F1lVv-QoVLv5uXJ_zO_cXeQxmJTCpkMVh-3CTWMs5bP6zyPmpeyQ9m9Q1P6wfbzHW7nze7nH0j8wfEMLMmMBRlbw409SVmSdIqbaL9U5r"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-white/90 backdrop-blur px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-widest text-[#181411] shadow-sm">1 Day</span>
+</div>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-1 text-primary mb-2">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="text-xs font-bold text-[#897261] ml-1">(4.9)</span>
+</div>
+<h3 class="text-[#181411] font-bold text-lg mb-2 leading-tight">Ethical Elephant Jungle Sanctuary</h3>
+<p class="text-[#897261] text-sm line-clamp-2 mb-4">A mindful and responsible day spent caring for majestic elephants in their natural forest habitat.</p>
+<div class="flex items-center justify-between border-t border-[#f4f2f0] pt-4 mt-2">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-[#897261]">Starting from</span>
+<span class="text-lg font-black text-primary">$75</span>
+</div>
+<button class="bg-[#f4f2f0] hover:bg-primary/20 text-[#181411] font-bold text-xs px-4 py-2 rounded-lg transition-colors">
+                                        View Details
+                                    </button>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group bg-white rounded-xl border border-[#e7e5e4] overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="relative h-56 w-full overflow-hidden">
+<img class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Northern Thailand river rafting adventure" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj4kNnL4J33UJmHGMqTEToNBa3b2mH-4BwYqDqtYe2IdYDEvctODTTYezruPN0DvT7dBNN2mH1xkD_wemN3XryifrIFzH2F4aZhm90j_al0aHFMkd2Qhgn9UHtJnGitcsEUPSgoFi8YlJS7AEAz7fK7vPHNmtt4-dck7eswgExFpwI6W57utiBoSPB1RI3vROyAlIAtWkNTsdAO00cejhFQ1g6_hSgtyP2FxtYFSnXNUUXzCKgWydF0Ac6arxfkEMn9f_Y1xGPn7J7"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-white/90 backdrop-blur px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-widest text-[#181411] shadow-sm">3D/2N</span>
+</div>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-1 text-primary mb-2">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm text-gray-300">star</span>
+<span class="material-symbols-outlined text-sm text-gray-300">star</span>
+<span class="text-xs font-bold text-[#897261] ml-1">(3.5)</span>
+</div>
+<h3 class="text-[#181411] font-bold text-lg mb-2 leading-tight">Mae Taeng River Wild Water Rafting</h3>
+<p class="text-[#897261] text-sm line-clamp-2 mb-4">Get your adrenaline pumping with class III and IV rapids through the scenic Mae Taeng Valley.</p>
+<div class="flex items-center justify-between border-t border-[#f4f2f0] pt-4 mt-2">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-[#897261]">Starting from</span>
+<span class="text-lg font-black text-primary">$120</span>
+</div>
+<button class="bg-[#f4f2f0] hover:bg-primary/20 text-[#181411] font-bold text-xs px-4 py-2 rounded-lg transition-colors">
+                                        View Details
+                                    </button>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group bg-white rounded-xl border border-[#e7e5e4] overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="relative h-56 w-full overflow-hidden">
+<img class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Northern Thai culinary class with local ingredients" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbZ5H_HvNQNQhRLoWLUyG7e-wQdnwvANs1jv1rXdK_H55DqudbSKRMf0o4cMvAJSW8sZL1tCtFNB-l3qZ-NY_Qz76Nq5dGa9vJIxHsOGyilQMgQFtrPiHRlgkkg_4Zg5LRFfdM1was7jaGrNyA0U2ZWasxNX-GMatFqZC-o06i7tPusA--vJZHg35SquWZBYL8H3Q9q9q1O93eEa73P07xfTmi_HTL1gIEt572EBWHJV2fBp0RkJcIFNVP8Gyf4AGCzIu1ngHMM4-i"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-white/90 backdrop-blur px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-widest text-[#181411] shadow-sm">1/2 Day</span>
+</div>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-1 text-primary mb-2">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm text-gray-300">star</span>
+<span class="text-xs font-bold text-[#897261] ml-1">(4.2)</span>
+</div>
+<h3 class="text-[#181411] font-bold text-lg mb-2 leading-tight">Authentic Lanna Cooking Class</h3>
+<p class="text-[#897261] text-sm line-clamp-2 mb-4">Learn the balance of spicy, sour, and salty in this hands-on organic farm-to-table cooking experience.</p>
+<div class="flex items-center justify-between border-t border-[#f4f2f0] pt-4 mt-2">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-[#897261]">Starting from</span>
+<span class="text-lg font-black text-primary">$55</span>
+</div>
+<button class="bg-[#f4f2f0] hover:bg-primary/20 text-[#181411] font-bold text-xs px-4 py-2 rounded-lg transition-colors">
+                                        View Details
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center items-center gap-2 mt-12 pb-10">
+<button class="size-10 rounded-lg bg-white border border-[#e7e5e4] flex items-center justify-center text-[#897261] hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="size-10 rounded-lg bg-primary text-[#181411] font-bold text-sm">1</button>
+<button class="size-10 rounded-lg bg-white border border-[#e7e5e4] flex items-center justify-center text-[#181411] font-bold text-sm hover:border-primary transition-colors">2</button>
+<button class="size-10 rounded-lg bg-white border border-[#e7e5e4] flex items-center justify-center text-[#181411] font-bold text-sm hover:border-primary transition-colors">3</button>
+<span class="text-[#897261] mx-2">...</span>
+<button class="size-10 rounded-lg bg-white border border-[#e7e5e4] flex items-center justify-center text-[#181411] font-bold text-sm hover:border-primary transition-colors">12</button>
+<button class="size-10 rounded-lg bg-white border border-[#e7e5e4] flex items-center justify-center text-[#897261] hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Newsletter Section -->
+<section class="bg-[#112114] py-16 px-6 text-white text-center">
+<div class="max-w-xl mx-auto">
+<h2 class="text-3xl font-black mb-4">Get the latest Lanna travel tips</h2>
+<p class="text-primary/70 mb-8">Join our community of culture explorers. Weekly updates on events and exclusive tours.</p>
+<form class="flex flex-col sm:flex-row gap-3">
+<input class="flex-1 rounded-xl bg-white/10 border-white/20 text-white placeholder:text-white/40 focus:ring-primary focus:border-primary py-3 px-6" placeholder="Your email address" type="email"/>
+<button class="bg-primary text-[#181411] px-8 py-3 rounded-xl font-black hover:bg-opacity-90 transition-all">Subscribe</button>
+</form>
+</div>
+</section>
+<!-- Footer Section -->
+<footer class="bg-white border-t border-[#e7e5e4] pt-16 pb-8 px-6 lg:px-20">
+<div class="mx-auto max-w-[1440px] grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-16">
+<div class="col-span-2 lg:col-span-2">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="text-primary text-3xl">
+                    <span class="material-symbols-outlined text-4xl">temple_buddhist</span>
+                </div>
+                <h2 class="text-2xl font-bold tracking-tight font-display text-[#181411]">LannaGate</h2>
+            </div>
+<p class="text-[#897261] text-sm max-w-xs mb-6">Your authentic gateway to the cultural heritage and natural wonders of Northern Thailand since 2012.</p>
+<div class="flex gap-4">
+<a class="size-8 rounded-full bg-[#f4f2f0] flex items-center justify-center text-[#181411] hover:bg-primary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="size-8 rounded-full bg-[#f4f2f0] flex items-center justify-center text-[#181411] hover:bg-primary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-[#181411] mb-6">Discovery</h4>
+<ul class="space-y-4 text-sm text-[#897261]">
+<li><a class="hover:text-primary" href="#">Destinations</a></li>
+<li><a class="hover:text-primary" href="#">Package Tours</a></li>
+<li><a class="hover:text-primary" href="#">Private Guide</a></li>
+<li><a class="hover:text-primary" href="#">Local Events</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#181411] mb-6">Company</h4>
+<ul class="space-y-4 text-sm text-[#897261]">
+<li><a class="hover:text-primary" href="about.html">About Us</a></li>
+<li><a class="hover:text-primary" href="about.html">Our Story</a></li>
+<li><a class="hover:text-primary" href="#">Careers</a></li>
+<li><a class="hover:text-primary" href="#">Sustainability</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#181411] mb-6">Support</h4>
+<ul class="space-y-4 text-sm text-[#897261]">
+<li><a class="hover:text-primary" href="#">Help Center</a></li>
+<li><a class="hover:text-primary" href="#">Safety Info</a></li>
+<li><a class="hover:text-primary" href="#">Cancellation</a></li>
+<li><a class="hover:text-primary" href="contact.html">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-[#f4f2f0] pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-[#897261]">
+<p>© 2024 LannaGate Travel &amp; Tours. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-[#181411]" href="#">Privacy Policy</a>
+<a class="hover:text-[#181411]" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

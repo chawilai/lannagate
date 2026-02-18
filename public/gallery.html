@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Gallery | LannaGate</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ee7c2b",
+              "background-light": "#f8f7f6",
+              "background-dark": "#221810",
+              "lanna-green": "#2d4c3b",
+              "lanna-gold": "#d4af37",
+            },
+            fontFamily: {
+              "display": ["Noto Serif", "serif"],
+              "sans": ["Noto Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans', sans-serif; }
+        h1, h2, h3, .font-display { font-family: 'Noto Serif', serif; }
+        .gallery-image {
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#181411] dark:text-white">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-[#f4f2f0] dark:border-white/10 px-6 lg:px-20 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="text-primary text-3xl">
+                    <span class="material-symbols-outlined text-4xl">temple_buddhist</span>
+                </div>
+                <!-- Link back to home -->
+                <a href="index.html">
+                    <h2 class="text-2xl font-bold tracking-tight font-display">LannaGate</h2>
+                </a>
+            </div>
+            <nav class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Home</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="packages.html">Packages</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors text-primary" href="gallery.html">Gallery</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="about.html">About</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="contact.html">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="packages.html" class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-xl font-bold text-sm transition-all shadow-lg shadow-primary/20">
+                    Book Now
+                </a>
+                <div class="size-10 rounded-full border-2 border-primary/20 overflow-hidden">
+                    <img alt="User Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtB3eX_XQRDU437c1ASn2W_kur3VCcg5nwMDWgdTMc1XfWX0NAiTs2WCCr9ng7FzerxELHg9jpPF5vCSrDlPi7iHu5qAEz8IxmwLUYlLymF_yPHF8b6TSTDTa_LVTUG_VYIDeL-eUIHr-U90OHZF7r72omWv1N4pU2ECmVhG7OqJaCFvNDmJTOEGWa-auXDTAO7a4u4394dxI6tFFcamu8DO4QAV-bUVVB7aX_fJ6wgtLmgrPD7OsW9mwjIlK2o8H5H_ieTI8J_8-z"/>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-20">
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-6 mb-16 text-center">
+            <span class="text-primary font-bold tracking-widest text-sm uppercase mb-4 block">Visual Journey</span>
+            <h1 class="text-5xl md:text-6xl font-black font-display mb-8 text-[#181411] dark:text-white">Through the Lens of Lanna</h1>
+            <p class="text-xl text-[#897261] dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                Explore the breathtaking landscapes, vibrant traditions, and moments of serenity captured across Northern Thailand.
+            </p>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="max-w-7xl mx-auto px-6 mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Image 1: Wat Phra Singh (reused from Index) -->
+                <div class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA19mmM3vNXcx8KUDI-GcNj7Jaclr4__NUc5t35O03tXgpWSPYNMcOXqYQif2_b7luxVLkkip0dDzHKrW6gidwl9frlTqtQ2-sD0C2gkF-rJneZgD7ltFGD0DvKFKzvzVCivzIoxQOxQoJn83rU5bBdluI6KJfZVVvKI2M9V2_rIxOgj1hDrsDnq0wX0V5Ru7fRsNdoqI6dqcUOstJx76V6Uz5_TETDLNSEzjoIT2q_-sKnMQWpCk-JxLlkuz0-CrflSFCa5uSniufT" alt="Chiang Mai Temple" class="gallery-image w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="text-white font-bold text-lg">Golden Hour at Wat Phra Singh</p>
+                    </div>
+                </div>
+                 <!-- Image 2: Elephant Nature Park (reused from Packages) -->
+                <div class="gallery-item group relative aspect-[3/4] rounded-2xl overflow-hidden cursor-pointer md:row-span-2">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmeUxb5pPUvdiMf1fISYw6TJdlDshscToWq_BhcYvb-YvDB8imwqnSIMcT04_pTj0ByGzNvN5rsdV5mfDs7On3zztbdWSV0-0c9pkTU6hBJQQG3hcQMguh9_bSqy2czZac3Bm0DRyqovcK-NR06ghndpzeLCTvPpdQn-9F1lVv-QoVLv5uXJ_zO_cXeQxmJTCpkMVh-3CTWMs5bP6zyPmpeyQ9m9Q1P6wfbzHW7nze7nH0j8wfEMLMmMBRlbw409SVmSdIqbaL9U5r" alt="Elephant Nature Park" class="gallery-image w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="text-white font-bold text-lg">Gentle Giants</p>
+                    </div>
+                </div>
+                 <!-- Image 3: Misty Mountains (reused from Packages) -->
+                <div class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS4Z770wyiwPIDI7zfA5x7MjcPFBqjKyE3u2Ta9awkY4S6d_uOywZr5TSKgwGwKgdqerESzK8ll2Pk3wv3IUQ5sjOKUOeA6yrReAR3FtJ-lvg03LfDDbWZDQ-dztagI47xLXmrRIv3BPexmLvJke_YoOo8mW7cFB_asv-VUq_KHS4oFwsSFm_b_lJKsSfF1ZPHBS_x_rT5_Xgjg97daqQSD8LS5grfwH1PT2OVb6xVqM8lcxhOtArWHOArf8yNlGWynjKz_f9splz-" alt="Misty Mountains" class="gallery-image w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="text-white font-bold text-lg">Misty Mountains</p>
+                    </div>
+                </div>
+                 <!-- Image 4: Culinary Delights (reused from Packages) -->
+                <div class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbZ5H_HvNQNQhRLoWLUyG7e-wQdnwvANs1jv1rXdK_H55DqudbSKRMf0o4cMvAJSW8sZL1tCtFNB-l3qZ-NY_Qz76Nq5dGa9vJIxHsOGyilQMgQFtrPiHRlgkkg_4Zg5LRFfdM1was7jaGrNyA0U2ZWasxNX-GMatFqZC-o06i7tPusA--vJZHg35SquWZBYL8H3Q9q9q1O93eEa73P07xfTmi_HTL1gIEt572EBWHJV2fBp0RkJcIFNVP8Gyf4AGCzIu1ngHMM4-i" alt="Lanna Food" class="gallery-image w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="text-white font-bold text-lg">Culinary Delights</p>
+                    </div>
+                </div>
+                 <!-- Image 5: White Temple (reused from Packages) -->
+                <div class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCoK0Z9XYVR5m4krVGgiQnMuCh7bHAvhCtQyqzYPRj4AN2EQgKImCqbO3lq_ih3feSZNN1hxW5mc3lV5H0VSNTsLGCpxDYMSxXWwqo9xbFfeG2ZMlhamUb_C7QniTsxbelvetkC42TZuzlFUVNNuzCycYjStNP-50tugJ61iu5_9viHkleoAD6q-dyGxC7S3BfitunUtlNBhV2x6CyT9DUCaOMcI6NQC9hSVawE32H0yydUsgX0VOnoz8d-xaEw1bsJSAo6OzTksgA" alt="White Temple" class="gallery-image w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="text-white font-bold text-lg">The White Temple</p>
+                    </div>
+                </div>
+                 <!-- Image 6: Pai Valley (reused from Index) -->
+                <div class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBptPO-tA2vkjAPvSrCnrxjKULZ_byUMegsAktG9TOiC7gzbGaJTCIK6lzv0Rqn-88f2S2Bqvt9OHyjNAgJmBe6UFt6SCkzOyJ7OAZXH-AqZ1aIS0bcaidTSTFQ7gtyJdSOYIV9GAlI1bpR2BCY1Wcc6Y-zANsOz3BK8vA7mvpUs_-3FFXbNGBmbcJjL_gReGzZjV592sem3ZRUeomWf1Jwd7T8rKc4nLujTFMJ4lf2-ecxQSpf66gQsJwI7BjBnVE-_BSgnr55Q03T" alt="Pai Valley" class="gallery-image w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="text-white font-bold text-lg">Serenity in Pai</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-background-dark text-white/80 py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <!-- Branding -->
+                <div class="col-span-1 md:col-span-1 space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="text-primary text-3xl">
+                            <span class="material-symbols-outlined text-4xl">temple_buddhist</span>
+                        </div>
+                        <h2 class="text-2xl font-bold tracking-tight font-display text-white">LannaGate</h2>
+                    </div>
+                    <p class="text-sm leading-relaxed">
+                        Preserving and sharing the beauty of Northern Thailand. Dedicated to authentic, sustainable, and unforgettable travel experiences.
+                    </p>
+                </div>
+                <!-- Quick Links -->
+                 <div class="space-y-6">
+                    <h4 class="text-white font-bold uppercase tracking-widest text-sm">Quick Links</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="index.html">Home</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="packages.html">Packages</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="gallery.html">Gallery</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="about.html">About Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Categories -->
+                  <div class="space-y-6">
+                    <h4 class="text-white font-bold uppercase tracking-widest text-sm">Categories</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="#">Cultural Heritage</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Nature & Trekking</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Local Living</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Wellness & Spa</a></li>
+                    </ul>
+                </div>
+                 <!-- Newsletter -->
+                <div class="space-y-6">
+                    <h4 class="text-white font-bold uppercase tracking-widest text-sm">Join Our Newsletter</h4>
+                    <p class="text-sm">Get travel tips and exclusive discounts delivered to your inbox.</p>
+                     <div class="flex flex-col gap-3">
+                        <input class="bg-white/10 border-white/20 rounded-xl px-4 py-3 text-sm focus:ring-primary focus:border-primary" placeholder="Your email address" type="email"/>
+                        <button class="bg-primary text-white font-bold py-3 rounded-xl hover:bg-primary/90 transition-all">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/10 text-center text-xs">
+                <p>© 2024 LannaGate Travel & Tours. All rights reserved. Designed with love for Northern Thailand.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
